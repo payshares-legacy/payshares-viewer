@@ -1,4 +1,4 @@
-stellarExplorer.directive('incomingTransactions', function() {
+paysharesExplorer.directive('incomingTransactions', function() {
   return {
     restrict: 'E',
     scope: true,

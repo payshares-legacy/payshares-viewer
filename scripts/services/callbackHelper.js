@@ -1,4 +1,4 @@
-stellarExplorer.service('callbackHelper', function() {
+paysharesExplorer.service('callbackHelper', function() {
   var callbackId = 1;
   var callbacks = {};
   var defaultCallback = function() {};

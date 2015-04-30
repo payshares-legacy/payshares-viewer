@@ -1,4 +1,4 @@
-stellarExplorer.directive('highlightChanges', function($timeout) {
+paysharesExplorer.directive('highlightChanges', function($timeout) {
   return {
     restrict: 'A',
     link: function(scope, element, attrs) {

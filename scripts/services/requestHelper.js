@@ -1,4 +1,4 @@
-stellarExplorer.service('requestHelper', function($q, callbackHelper) {
+paysharesExplorer.service('requestHelper', function($q, callbackHelper) {
   var connection = null;
 
   function useConnection(newConnection) {

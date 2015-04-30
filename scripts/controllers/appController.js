@@ -1,14 +1,14 @@
-stellarExplorer.controller('appController', function($scope, $q, requestHelper, federation, reverseFederation) {
+paysharesExplorer.controller('appController', function($scope, $q, requestHelper, federation, reverseFederation) {
   var websocketProtocol = location.protocol == 'https:' ? 'wss:' : 'ws:';
 
   $scope.testConfig = {
-    network: websocketProtocol + '//test.stellar.org:9001',
-    domain: 'stg.stellar.org'
+    network: websocketProtocol + '//test.payshares.org:9001',
+    domain: 'stg.payshares.org'
   };
 
   $scope.liveConfig = {
-    network: websocketProtocol + '//live.stellar.org:9001',
-    domain: 'stellar.org'
+    network: websocketProtocol + '//live.payshares.org:9001',
+    domain: 'payshares.org'
   };
 
   var connection = null;
@@ -143,11 +143,11 @@ stellarExplorer.controller('appController', function($scope, $q, requestHelper, 
   }
 
   function handleTransaction(transaction){
-    // If the transaction amount it's only a number they are microstellars.
+    // If the transaction amount it's only a number they are micropaysharess.
     if(!isNaN(transaction.Amount)){
       transaction.Amount = {
-        currency: 'STR',
-        value: dustToStellars(transaction.Amount) // Convert to stellars
+        currency: 'XPR',
+        value: dustToPaysharess(transaction.Amount) // Convert to paysharess
       };
     }
 
@@ -285,12 +285,12 @@ stellarExplorer.controller('appController', function($scope, $q, requestHelper, 
   }
 
   function aggregateBalances() {
-    $scope.balances = {'STR': 0};
-    $scope.balanceCurrencies = ['STR'];
+    $scope.balances = {'XPR': 0};
+    $scope.balanceCurrencies = ['XPR'];
 
     if (!$scope.account_info) return;
 
-    $scope.balances['STR'] = +dustToStellars($scope.account_info.Balance);
+    $scope.balances['XPR'] = +dustToPaysharess($scope.account_info.Balance);
 
     $scope.account_lines.forEach(function(line) {
       $scope.balances[line.currency] = ($scope.balances[line.currency] || 0) + (+line.balance);

@@ -1,4 +1,4 @@
-stellarExplorer.factory('stellarTxt', ['$http', '$q', '$rootScope', function ($http, $q, $scope) {
+paysharesExplorer.factory('paysharesTxt', ['$http', '$q', '$rootScope', function ($http, $q, $scope) {
   var txts = {};
 
   function get(domain) {
@@ -10,14 +10,14 @@ stellarExplorer.factory('stellarTxt', ['$http', '$q', '$rootScope', function ($h
       txts[domain] = txtPromise;
 
       var urls = [
-          'https://www.'+domain+'/stellar.txt',
-          'https://'+domain+'/stellar.txt',
-          'https://stellar.'+domain+'/stellar.txt'
+          'https://www.'+domain+'/payshares.txt',
+          'https://'+domain+'/payshares.txt',
+          'https://payshares.'+domain+'/payshares.txt'
       ];
       var next = function (xhr, status) {
         if (!urls.length) {
           txts[domain] = {};
-          txtPromise.reject(new Error("No stellar.txt found"));
+          txtPromise.reject(new Error("No payshares.txt found"));
           return;
         }
         var url = urls.pop();

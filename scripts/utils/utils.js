@@ -8,11 +8,11 @@ function toFinancial(x) {
   return parts.join(".");
 }
 
-stellarExplorer.filter('toFinancial', function() {
+paysharesExplorer.filter('toFinancial', function() {
   return toFinancial;
 });
 
-function dustToStellars(x) {
+function dustToPaysharess(x) {
   if (!x || !(+x)) return x;
   x = x.toString();
 
@@ -21,6 +21,6 @@ function dustToStellars(x) {
   return +(x.slice(0, x.length - 6) + '.' + x.slice(x.length - 6));
 }
 
-stellarExplorer.filter('dustToStellars', function() {
-  return dustToStellars;
+paysharesExplorer.filter('dustToPaysharess', function() {
+  return dustToPaysharess;
 });

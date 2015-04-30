@@ -1,1 +1,1 @@
-var stellarExplorer = angular.module('stellarExplorer', []);
+var paysharesExplorer = angular.module('paysharesExplorer', []);

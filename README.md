@@ -1,8 +1,8 @@
-Stellar Viewer
+Payshares Viewer
 ==============
-This is a simple tool that shows the balance, trust lines and offers of any specified user on the Stellar network. It is an AngularJS application that uses [WebSockets](https://developer.mozilla.org/en-US/docs/WebSockets) to communicate with a [Stellar daemon](https://github.com/stellar/stellard).
+This is a simple tool that shows the balance, trust lines and offers of any specified user on the Payshares network. It is an AngularJS application that uses [WebSockets](https://developer.mozilla.org/en-US/docs/WebSockets) to communicate with a [Payshares daemon](https://github.com/payshares/paysharesd).
 
-You can see an example of this in action at https://www.stellar.org/viewer/
+You can see an example of this in action at https://www.payshares.org/viewer/
 
 ## Features
 - Basic account info lookup (balance, trust lines, offers)
@@ -30,4 +30,4 @@ http-server
 Open up http://localhost:8080 in your browser.
 
 ## License
-Stellar Viewer is open source and permissively licensed under the ISC license. See the LICENSE file for more details.
+Payshares Viewer is open source and permissively licensed under the ISC license. See the LICENSE file for more details.

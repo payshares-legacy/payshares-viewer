@@ -1,4 +1,4 @@
-stellarExplorer.factory('reverseFederation', ['$q', '$rootScope', '$http', 'stellarTxt', function ($q, $scope, $http, $txt) {
+paysharesExplorer.factory('reverseFederation', ['$q', '$rootScope', '$http', 'paysharesTxt', function ($q, $scope, $http, $txt) {
     var txts = {};
 
     var cache = {};
@@ -30,8 +30,8 @@ stellarExplorer.factory('reverseFederation', ['$q', '$rootScope', '$http', 'stel
         function handleNoTxt() {
             reverseFederationPromise.reject({
                 result: "error",
-                error: "noStellarTxt",
-                error_message: "Stellar.txt not available for the requested domain."
+                error: "noPaysharesTxt",
+                error_message: "Payshares.txt not available for the requested domain."
             });
         }
 

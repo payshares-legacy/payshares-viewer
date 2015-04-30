@@ -1,4 +1,4 @@
-stellarExplorer.factory('federation', ['$q', '$rootScope', '$http', 'stellarTxt', function ($q, $scope, $http, $txt) {
+paysharesExplorer.factory('federation', ['$q', '$rootScope', '$http', 'paysharesTxt', function ($q, $scope, $http, $txt) {
   var txts = {};
 
   var cache = {};
@@ -36,8 +36,8 @@ stellarExplorer.factory('federation', ['$q', '$rootScope', '$http', 'stellarTxt'
     function handleNoTxt() {
       federationPromise.reject({
         result: "error",
-        error: "noStellarTxt",
-        error_message: "Stellar.txt not available for the requested domain."
+        error: "noPaysharesTxt",
+        error_message: "Payshares.txt not available for the requested domain."
       });
     }
 

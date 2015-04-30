@@ -1,4 +1,4 @@
-stellarExplorer.directive('trustLines', function() {
+paysharesExplorer.directive('trustLines', function() {
   return {
     restrict: 'E',
     scope: true,
