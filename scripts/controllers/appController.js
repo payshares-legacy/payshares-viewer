@@ -1,4 +1,4 @@
-stellarExplorer.controller('appController', function($scope, $q, requestHelper, federation, reverseFederation) {
+paysharesExplorer.controller('appController', function($scope, $q, requestHelper, federation, reverseFederation) {
   var websocketProtocol = location.protocol == 'https:' ? 'wss:' : 'ws:';
 
   $scope.testConfig = {
