@@ -2,13 +2,13 @@ paysharesExplorer.controller('appController', function($scope, $q, requestHelper
   var websocketProtocol = location.protocol == 'https:' ? 'wss:' : 'ws:';
 
   $scope.testConfig = {
-    network: websocketProtocol + '//test.stellar.org:9001',
+    network: websocketProtocol + '//test.payshares.org:9001',
     domain: 'stg.stellar.org'
   };
 
   $scope.liveConfig = {
-    network: websocketProtocol + '//one.validator.payshares.co:5016',
-    domain: 'payshares.co'
+    network: websocketProtocol + '//one.validator.payshares.org:5016',
+    domain: 'payshares.org'
   };
 
   var connection = null;
