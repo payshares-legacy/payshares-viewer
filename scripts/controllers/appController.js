@@ -3,7 +3,7 @@ paysharesExplorer.controller('appController', function($scope, $q, requestHelper
 
   $scope.testConfig = {
     network: websocketProtocol + '//test.payshares.org:9001',
-    domain: 'stg.stellar.org'
+    domain: 'stg.payshares.org'
   };
 
   $scope.liveConfig = {
