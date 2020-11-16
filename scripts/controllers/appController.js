@@ -7,7 +7,7 @@ paysharesExplorer.controller('appController', function($scope, $q, requestHelper
   };
 
   $scope.liveConfig = {
-    network: websocketProtocol + '//one.validator.payshares.org:5016',
+    network: websocketProtocol + '//one.vld.payshares.org:5016',
     domain: 'payshares.org'
   };
 
