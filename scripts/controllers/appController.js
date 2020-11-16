@@ -146,7 +146,7 @@ paysharesExplorer.controller('appController', function($scope, $q, requestHelper
     // If the transaction amount it's only a number they are microstellars.
     if(!isNaN(transaction.Amount)){
       transaction.Amount = {
-        currency: 'STR',
+        currency: 'XPS',
         value: dustToStellars(transaction.Amount) // Convert to stellars
       };
     }
@@ -285,12 +285,12 @@ paysharesExplorer.controller('appController', function($scope, $q, requestHelper
   }
 
   function aggregateBalances() {
-    $scope.balances = {'STR': 0};
-    $scope.balanceCurrencies = ['STR'];
+    $scope.balances = {'XPS': 0};
+    $scope.balanceCurrencies = ['XPS'];
 
     if (!$scope.account_info) return;
 
-    $scope.balances['STR'] = +dustToStellars($scope.account_info.Balance);
+    $scope.balances['XPS'] = +dustToStellars($scope.account_info.Balance);
 
     $scope.account_lines.forEach(function(line) {
       $scope.balances[line.currency] = ($scope.balances[line.currency] || 0) + (+line.balance);
