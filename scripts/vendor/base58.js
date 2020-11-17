@@ -2,7 +2,7 @@
 (function (Buffer){
 var crypto = _dereq_('crypto');
 
-var ALPHABET = 'gsphnaf39wBUDNEGHJKLM4PQRST7VWXYZ2bcdeCr65jkm8oFqi1tuvAxyz';
+var ALPHABET = 'xsphnaf39wBUDNEGHJKLM4PQRST7VWXYZ2bcdeCr65jkm8oFqi1tuvAgyz';
 var ALPHABET_INV = {};
 for(var i=0; i < ALPHABET.length; i++) {
   ALPHABET_INV[ALPHABET[i]] = i;
