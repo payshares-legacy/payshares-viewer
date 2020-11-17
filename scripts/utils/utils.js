@@ -12,7 +12,7 @@ paysharesExplorer.filter('toFinancial', function() {
   return toFinancial;
 });
 
-function dustToPaysharess(x) {
+function dustToPayshares(x) {
   if (!x || !(+x)) return x;
   x = x.toString();
 
@@ -21,6 +21,6 @@ function dustToPaysharess(x) {
   return +(x.slice(0, x.length - 6) + '.' + x.slice(x.length - 6));
 }
 
-paysharesExplorer.filter('dustToPaysharess', function() {
-  return dustToPaysharess;
+paysharesExplorer.filter('dustToPayshares', function() {
+  return dustToPayshares;
 });
